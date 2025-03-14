@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs
+logs/
+*.log
+*.log.*
+log/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build files
+dist/
+out/
+coverage/
+
+# PM2 process logs
+pm2.log
+pm2.pid
+
+# zip files 
+fuji-core.zip
