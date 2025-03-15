@@ -12,6 +12,7 @@ const expenseRoutes = require('./src/routes/expenses');
 const categoryRoutes = require('./src/routes/category');
 const authRoutes = require('./src/routes/auth');
 const pool = require('./src/connections/db');
+const CORS_ORIGIN = process.env.CORS_ORIGIN;
 
 const app = express();
 app.use(express.json());
@@ -20,6 +21,11 @@ app.use(express.json());
 app.use(cors({
   origin: '*',
   credentials: true
+}));
+app.use(cors({
+  origin: [CORS_ORIGIN], // Allow all origins (for debugging, restrict later)
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept', 'Authorization']
 }));
 
 pool.connect()
