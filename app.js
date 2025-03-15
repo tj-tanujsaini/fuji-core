@@ -23,11 +23,19 @@ app.use(cors({
 }));
 
 pool.connect()
-    .then(() => console.log("✅ Connected to PostgreSQL"))
-    .catch(err => console.error("❌ Connection error", err));
+  .then(() => console.log("✅ Connected to PostgreSQL"))
+  .catch(err => console.error("❌ Connection error", err));
 
 app.get('/', (req, res) => {
-    res.send('pong');
+  const dramaticResponse = `
+      .------..------..------..------.
+      | P  || O  || N  || G  |
+      '------''------''------''------'
+       Pong! You've reached the server.
+       Welcome to the land of code and creativity!
+      `;
+
+  res.send(`<pre>${dramaticResponse}</pre>`);
 });
 
 app.use('/login', authRoutes);
