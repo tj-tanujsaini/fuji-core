@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.AWS_USER }}
           key: ${{ secrets.AWS_SSH_KEY }}
           script: |
-            ~/deploy_fuji.sh
+            ~/deploy_fuji_core.sh
 
