@@ -34,9 +34,9 @@ pool.connect()
 
 app.get('/', (req, res) => {
   const dramaticResponse = `
-      .------..------..------..------.
+      .------..------..------.
       | P  || O  || N  || G  |
-      '------''------''------''------'
+      '------''------''------'
        Pong! You've reached the server.
        Welcome to the land of code and creativity!
       `;
