@@ -18,7 +18,7 @@ app.use(express.json());
 
 // TODO :: update to same server request 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN,
+  origin: '*',
   credentials: true
 }));
 
