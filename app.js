@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
   res.send(`<pre>${dramaticResponse}</pre>`);
 });
 
-app.use('/login', authRoutes);
+app.use('/api/login', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/expenses', expenseRoutes);
 app.use('/api/categories', categoryRoutes);
